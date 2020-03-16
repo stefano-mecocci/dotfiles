@@ -1,0 +1,71 @@
+Mar 16 15:22 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Mar 16 15:22 : avahi: Failed to add service _mpd._tcp: Local name collision
+Mar 16 15:22 : exception: Failed to open '/home/stefano/.mpd/mpdstate': No such file or directory
+Mar 16 15:22 : config: option 'device' on line 13 was not recognized
+Mar 16 15:22 : update: added /Fasma - Per sentirmi vivo.mp3
+Mar 16 15:32 : client: [0] opened from 127.0.0.1:52738
+Mar 16 15:33 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Mar 16 15:33 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Mar 16 15:35 : update: updating /Fasma - Per sentirmi vivo.mp3
+Mar 16 15:37 : player: played "Fasma - Per sentirmi vivo.mp3"
+Mar 16 15:39 : update: added /Eminem - Godzilla.mp3
+Mar 16 15:41 : client: [0] closed
+Mar 16 15:43 : client: [1] opened from 127.0.0.1:52866
+Mar 16 15:43 : player: played "Eminem - Godzilla.mp3"
+Mar 16 15:44 : client: [1] closed
+Mar 16 15:44 : client: [2] opened from 127.0.0.1:52870
+Mar 16 15:44 : client: [2] closed
+Mar 16 15:45 : client: [3] opened from 127.0.0.1:52876
+Mar 16 15:50 : player: played "Eminem - Godzilla.mp3"
+Mar 16 15:53 : player: played "Fasma - Per sentirmi vivo.mp3"
+Mar 16 15:56 : player: played "Fasma - Per sentirmi vivo.mp3"
+Mar 16 15:58 : client: [3] closed
+Mar 16 16:01 : player: played "Eminem - Godzilla.mp3"
+Mar 16 16:04 : client: [4] opened from 127.0.0.1:53282
+Mar 16 16:09 : player: played "Eminem - Godzilla.mp3"
+Mar 16 16:15 : client: [4] closed
+Mar 16 18:27 : client: [5] opened from 127.0.0.1:54730
+Mar 16 18:30 : client: [5] closed
+Mar 16 18:30 : client: [6] opened from 127.0.0.1:54740
+Mar 16 18:31 : player: played "Eminem - Godzilla.mp3"
+Mar 16 18:32 : client: [6] closed
+Mar 16 18:33 : exception: Failed to play on "pulse audio" (pulse): disconnected
+Mar 16 18:33 : player: played "Eminem - Godzilla.mp3"
+Mar 16 18:34 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Mar 16 18:34 : config: option 'device' on line 13 was not recognized
+Mar 16 18:34 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Mar 16 18:34 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Mar 16 18:34 : avahi: Service 'Music Player @ debian' successfully established.
+Mar 16 18:36 : client: [0] opened from 127.0.0.1:37676
+Mar 16 18:36 : client: [0] closed
+Mar 16 18:36 : exception: Failed to pause "pulse audio" (pulse): failed to connect the stream: Connection terminated
+Mar 16 18:40 : client: [1] opened from 127.0.0.1:37708
+Mar 16 18:44 : player: played "Fasma - Per sentirmi vivo.mp3"
+Mar 16 18:47 : player: played "Fasma - Per sentirmi vivo.mp3"
+Mar 16 18:51 : client: [1] closed
+Mar 16 18:51 : player: played "Eminem - Godzilla.mp3"
+Mar 16 18:52 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Mar 16 18:52 : config: option 'device' on line 13 was not recognized
+Mar 16 18:52 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Mar 16 18:52 : client: [0] opened from 127.0.0.1:38034
+Mar 16 18:52 : avahi: Service 'Music Player @ debian' successfully established.
+Mar 16 18:55 : player: played "Eminem - Godzilla.mp3"
+Mar 16 18:56 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Mar 16 18:56 : config: option 'device' on line 13 was not recognized
+Mar 16 18:56 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Mar 16 18:56 : avahi: Service 'Music Player @ debian' successfully established.
+Mar 16 18:56 : client: [0] opened from 127.0.0.1:55088
+Mar 16 18:56 : client: [0] closed
+Mar 16 18:57 : client: [1] opened from 127.0.0.1:55098
+Mar 16 18:57 : client: [1] closed
+Mar 16 19:13 : client: [2] opened from 127.0.0.1:55114
+Mar 16 19:13 : player: played "Eminem - Godzilla.mp3"
+Mar 16 19:13 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Mar 16 19:18 : player: played "Eminem - Godzilla.mp3"
+Mar 16 19:22 : player: played "Eminem - Godzilla.mp3"
+Mar 16 19:32 : player: played "Eminem - Godzilla.mp3"
+Mar 16 19:44 : client: [2] closed
+Mar 16 20:45 : client: [3] opened from 127.0.0.1:55500
+Mar 16 20:49 : player: played "Eminem - Godzilla.mp3"
+Mar 16 20:58 : player: played "Eminem - Godzilla.mp3"
+Mar 16 21:00 : client: [3] closed
