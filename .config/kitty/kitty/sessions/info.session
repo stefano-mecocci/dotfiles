@@ -1,0 +1,5 @@
+layout grid
+
+launch htop
+launch tty-clock -c
+launch ncmpcpp
