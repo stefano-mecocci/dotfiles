@@ -1,3 +1,4 @@
 feh --bg-fill /home/stefano/Pictures/Wallpapers/gray-purple.png
-compton &
 bash /home/stefano/.config/polybar/launch.sh
+compton &
+xrdb -merge ~/.config/.Xresources

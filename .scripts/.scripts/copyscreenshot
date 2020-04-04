@@ -1,1 +1,0 @@
-scrot -s -e 'xclip -selection c -t image/png < $f'
