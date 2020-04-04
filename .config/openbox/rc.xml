@@ -141,7 +141,7 @@
 				sans
 			</name>
       <size>
-				12
+				10
 			</size>
       <!-- font size in points -->
       <weight>
@@ -200,10 +200,10 @@
 		and back in
 		-->
     <number>
-			3
+			2
 		</number>
     <firstdesk>
-			3
+			1
 		</firstdesk>
     <names>
       <!--
