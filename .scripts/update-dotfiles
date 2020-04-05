@@ -1,0 +1,11 @@
+#!/bin/bash
+
+cp -r ~/.config/openbox ~/Documents/dotfiles/.config/
+cp -r ~/.config/polybar ~/Documents/dotfiles/.config/
+cp -r ~/.config/.Xresources ~/Documents/dotfiles/.config/.Xresources
+cp -r ~/.config/kitty ~/Documents/dotfiles/.config/
+cp -r ~/.config/compton.conf ~/Documents/dotfiles/.config/compton.conf
+
+cp -r ~/.scripts ~/Documents/dotfiles/
+cp -r ~/.bash_aliases ~/Documents/dotfiles/.bash_aliases
+cp -r ~/.themes/test-theme ~/Documents/dotfiles/.themes
