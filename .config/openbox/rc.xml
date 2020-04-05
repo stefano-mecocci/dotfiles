@@ -315,6 +315,25 @@
 		</chainQuitKey>
 
     <!-- CUSTOM KEYBINDINGS -->
+    <keybind  key="W-d">
+        <action  name="ForEach">
+            <then>
+                <action  name="Iconify"></action>
+            </then>
+        </action>
+    </keybind>
+    <keybind key="W-1">
+      <action  name="SendToDesktop">
+        <to>1</to>
+        <follow>no</follow>
+      </action>
+    </keybind>
+    <keybind key="W-2">
+      <action  name="SendToDesktop">
+        <to>2</to>
+        <follow>no</follow>
+      </action>
+    </keybind>
     <keybind key="A-S-s">
 	    <action name="Unmaximize"/>
     </keybind>
@@ -399,13 +418,13 @@
     </keybind>
     <keybind key="XF86AudioLowerVolume">
       <action name="Execute">
-        <command>amixer set Master 5%-</command>
+        <command>bash /home/stefano/.scripts/volume_down</command>
       </action>
     </keybind>
     <keybind key="XF86AudioRaiseVolume">
       <action name="Execute">
         <command>
-					amixer set Master 5%+
+					bash /home/stefano/.scripts/volume_up
 				</command>
       </action>
     </keybind>

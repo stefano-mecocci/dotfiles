@@ -1,5 +1,5 @@
 alias ls='ls -1 --color=auto'
-alias ll='ls -l --color=auto'
+alias ll='ls -l -h --color=auto'
 alias la='ls -1A --color=auto'
 
 # previene la cancellazione erronea dei file
