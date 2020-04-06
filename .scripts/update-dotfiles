@@ -10,3 +10,4 @@ cp -r ~/.scripts ~/Documents/dotfiles/
 cp -r ~/.bash_aliases ~/Documents/dotfiles/.bash_aliases
 cp -r ~/.themes/test-theme ~/Documents/dotfiles/.themes
 cp -r ~/.fonts ~/Documents/dotfiles/
+cp -r ~/.sounds ~/Documents/dotfiles/
