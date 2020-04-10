@@ -13,3 +13,5 @@ alias poweroff='sudo shutdown -h now'
 alias battery="cat /sys/class/power_supply/BAT1/capacity"
 
 alias saveconf='~/.scripts/update-dotfiles'
+alias lockscreen='i3lock -i ~/Pictures/Wallpapers/frattale.png'
+alias flux='redshift -l 45:7'
