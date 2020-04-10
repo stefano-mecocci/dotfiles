@@ -37,3 +37,4 @@ neofetch
 tty-clock
 scrot
 amixer
+i3lock
