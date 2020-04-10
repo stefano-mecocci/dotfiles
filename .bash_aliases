@@ -10,6 +10,6 @@ alias codehere='code . && exit'
 
 alias refresh='. ~/.bashrc'
 alias poweroff='sudo shutdown -h now'
-alias battery="upower -i /org/freedesktop/UPower/devices/battery_BAT1 | grep percentage | cut -f2 -d: | xargs | sed -e 's/%/ /'"
+alias battery="cat /sys/class/power_supply/BAT1/capacity"
 
 alias saveconf='~/.scripts/update-dotfiles'
