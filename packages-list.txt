@@ -38,3 +38,4 @@ tty-clock
 scrot
 amixer
 i3lock
+zentile (from github)

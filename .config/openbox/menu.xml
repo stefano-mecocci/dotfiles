@@ -6,11 +6,12 @@
                 file:///usr/share/openbox/menu.xsd">
 
 <menu id="root-menu" label="Openbox 3">
+<separator label="MENU"/>
   <item label="Terminale">
     <action name="Execute"><execute>x-terminal-emulator</execute></action>
   </item>
   <item label="Chrome">
-    <action name="Execute"><execute>x-www-browser</execute></action>
+    <action name="Execute"><execute>google-chrome-stable --enable-features=WebUIDarkMode --force-dark-mode</execute></action>
   </item>
   <!-- This requires the presence of the 'openbox-menu' package to work -->
   <menu id="/Debian" />

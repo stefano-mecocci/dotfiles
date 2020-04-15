@@ -1,0 +1,10 @@
+#!/bin/bash
+
+export DISPLAY=:0
+
+battery=$(cat /sys/class/power_supply/BAT1/capacity)
+
+if [ $battery -lt 20 ]; then
+	/usr/bin/notify-send "Batteria scarica" "Sotto il 20%"
+fi
+

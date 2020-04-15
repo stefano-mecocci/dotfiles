@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <openbox_config xmlns="http://openbox.org/3.4/rc" xmlns:xi="http://www.w3.org/2001/XInclude">
   <resistance>
     <strength>
@@ -91,7 +90,7 @@
 		S: shade (roll up/down)
 		D: omnipresent (on all desktops).
 		-->
-    <keepBorder>no</keepBorder>
+    <keepBorder>yes</keepBorder>
     <animateIconify>no</animateIconify>
     <font place="ActiveWindow">
       <name>sans</name>
@@ -308,44 +307,42 @@
 		</moveButton>
     <!-- 'Left', 'Middle', 'Right' -->
   </dock>
-
   <keyboard>
     <chainQuitKey>
 			C-g
 		</chainQuitKey>
-
     <!-- CUSTOM KEYBINDINGS -->
     <keybind key="W-l">
-        <action name="Execute">
-                <command>i3lock -i /home/stefano/Pictures/Wallpapers/frattale.png</command>
-        </action>
+      <action name="Execute">
+        <command>bash /home/stefano/.scripts/lock.sh</command>
+      </action>
     </keybind>
-    <keybind  key="W-d">
-        <action  name="ForEach">
-            <then>
-                <action  name="Iconify"></action>
-            </then>
-        </action>
+    <keybind key="W-d">
+      <action name="ForEach">
+        <then>
+          <action name="Iconify"/>
+        </then>
+      </action>
     </keybind>
     <keybind key="W-1">
-      <action  name="SendToDesktop">
+      <action name="SendToDesktop">
         <to>1</to>
         <follow>no</follow>
       </action>
     </keybind>
     <keybind key="W-2">
-      <action  name="SendToDesktop">
+      <action name="SendToDesktop">
         <to>2</to>
         <follow>no</follow>
       </action>
     </keybind>
     <keybind key="A-S-s">
-	    <action name="Unmaximize"/>
+      <action name="Unmaximize"/>
     </keybind>
     <keybind key="A-e">
-	<action name="Execute">
-    		<command>rofi -show drun</command>
-	</action>
+      <action name="Execute">
+        <command>rofi -show drun</command>
+      </action>
     </keybind>
     <keybind key="A-s">
       <action name="Maximize"/>
@@ -464,7 +461,7 @@
     <keybind key="C-A-t">
       <action name="Execute">
         <command>
-					kitty
+					x-terminal-emulator
 				</command>
       </action>
     </keybind>
@@ -1161,13 +1158,12 @@
       <layer>
 				above
 			</layer>
-	<decor>no</decor>
+      <decor>no</decor>
     </application>
     <application class="kitty">
       <layer>
 				above
 			</layer>
-      <decor>no</decor>
     </application>
     <!--
 		# this is an example with comments through out. use these to make your
