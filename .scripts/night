@@ -1,0 +1,11 @@
+#!/bin/bash
+
+on=$(pgrep redshift)
+
+  if [ -z $on ]
+  then
+    bash -c "redshift -l 45:7 -t 5500:3600 &"
+    notify-send "Modalità notte attivata"
+  else
+    killall redshift
+  fi

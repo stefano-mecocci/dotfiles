@@ -312,9 +312,15 @@
 			C-g
 		</chainQuitKey>
     <!-- CUSTOM KEYBINDINGS -->
+    <keybind key="W-n">
+      <action name="Execute">
+        <command>bash ~/.scripts/night</command>
+      </action>
+    </keybind>
+
     <keybind key="W-l">
       <action name="Execute">
-        <command>bash /home/stefano/.scripts/lock.sh</command>
+        <command>bash ~/.scripts/lock</command>
       </action>
     </keybind>
     <keybind key="W-d">
@@ -341,7 +347,7 @@
     </keybind>
     <keybind key="A-e">
       <action name="Execute">
-        <command>rofi -show drun</command>
+        <command>rofi -no-lazy-grab -show drun -theme ~/.themes/rofi-theme.rasi</command>
       </action>
     </keybind>
     <keybind key="A-s">
@@ -601,7 +607,7 @@
 				</command>
       </action>
     </keybind>
-    <keybind key="A-S-Print">
+    <keybind key="W-Print">
       <action name="Execute">
         <command>
 					bash ~/.scripts/copyscreenshot
