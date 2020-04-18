@@ -330,16 +330,26 @@
         </then>
       </action>
     </keybind>
-    <keybind key="W-1">
+    <keybind key="W-S-1">
       <action name="SendToDesktop">
         <to>1</to>
         <follow>no</follow>
       </action>
     </keybind>
-    <keybind key="W-2">
+    <keybind key="W-S-2">
       <action name="SendToDesktop">
         <to>2</to>
         <follow>no</follow>
+      </action>
+    </keybind>
+    <keybind key="W-1">
+      <action name="GoToDesktop">
+        <to>1</to>
+      </action>
+    </keybind>
+    <keybind key="W-2">
+      <action name="GoToDesktop">
+        <to>2</to>
       </action>
     </keybind>
     <keybind key="A-S-s">
@@ -1009,20 +1019,6 @@
       </mousebind>
     </context>
     <context name="Desktop">
-      <mousebind button="Up" action="Click">
-        <action name="GoToDesktop">
-          <to>
-						previous
-					</to>
-        </action>
-      </mousebind>
-      <mousebind button="Down" action="Click">
-        <action name="GoToDesktop">
-          <to>
-						next
-					</to>
-        </action>
-      </mousebind>
       <mousebind button="A-Up" action="Click">
         <action name="GoToDesktop">
           <to>
