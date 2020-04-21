@@ -73,3 +73,4 @@ fi
 
 export EDITOR=vim
 export XDG_CURRENT_DIR=/run/user/1000
+export $(dbus-launch)

@@ -1,4 +1,4 @@
 #!/bin/bash
 
 amixer set Master 5%+
-play /home/stefano/.sounds/drip.ogg
+play $HOME/.sounds/drip.ogg
