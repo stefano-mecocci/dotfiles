@@ -12,8 +12,7 @@ cp -r ~/.config/i3/config ~/Documents/dotfiles/.config/i3/
 cp -r ~/.scripts ~/Documents/dotfiles/
 cp -r ~/.bash_aliases ~/Documents/dotfiles/.bash_aliases
 cp -r ~/.bashrc ~/Documents/dotfiles/.bashrc
-cp -r ~/.themes/test-theme ~/Documents/dotfiles/.themes
-cp -r ~/.themes/rofi-theme.rasi ~/Documents/dotfiles/.themes/
+cp -r ~/.themes ~/Documents/dotfiles/
 cp -r ~/.fonts ~/Documents/dotfiles/
 cp -r ~/.sounds ~/Documents/dotfiles/
 

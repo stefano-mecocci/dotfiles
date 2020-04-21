@@ -1,0 +1,25 @@
+# Window styles							
+window.client.padding.width: 5
+window.client.padding.height: 5
+border.width: 6
+window.handle.width: 0
+window.active.border.color: #f21374
+window.inactive.border.color: #f21374
+
+# Menu styles
+menu.border.width: 8
+menu.border.color: #222
+menu.separator.color: #222
+menu.separator.padding.height: 5
+menu.overlap.x: -15
+menu.items.text.color: #eee
+menu.items.active.text.color: #eee
+menu.items.bg: Solid Flat
+menu.items.bg.color: #222
+menu.items.active.bg: Solid Flat
+menu.items.active.bg.color: #f21374
+
+# OSD styles
+osd.border.width: 5
+osd.bg: flat solid
+osd.bg.color: #fff
