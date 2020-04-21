@@ -339,7 +339,10 @@
 			</action>
 		</keybind>
 
-		<!-- WINDOW EDIT SHORTCUTS -->
+    <!-- WINDOW EDIT SHORTCUTS -->
+    <keybind key="W-a">
+      <action name="ToggleAlwaysOnTop"/>
+    </keybind>
 		<keybind key="W-d">
 			<action name="ToggleShowDesktop" />
 		</keybind>
