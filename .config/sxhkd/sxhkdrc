@@ -1,0 +1,102 @@
+# Draw terminals!        
+super + z
+        bash ~/.scripts/kittydraw
+
+# Logout
+super + x
+        bspc quit 1
+
+# Reload configuration files
+super + r
+        pkill -USR1 -x sxhkd
+
+# Open terminal
+super + Return
+        kitty
+
+# Show Desktop
+super + d
+        boh
+
+# Go fullscreen
+super + f
+        bspc node -t fullscreen
+
+# Open Chrome
+super + b
+        google-chrome
+
+# Close current window
+super + q
+        bspc node --close
+
+# Open application menu
+super + e
+        rofi -no-lazy-grab -show drun -theme ~/.themes/rofi-theme.rasi
+
+# Make window floating
+super + a
+        bspc node --state floating
+
+# Make window tiled
+super + t
+        bspc node --state tiled
+
+# Cycle through windows
+alt + {_,shift} + Tab
+        bspc node --focus {prev,next}
+
+# Like Alt+Tab but for desktops
+super + {_,shift} + Tab
+        bspc desktop --focus {prev,next}.occupied
+
+# Focus/Swap window
+super + {_,shift + }{Left,Down,Up,Right}
+        bspc node --{focus,swap} {west,south,north,east}
+
+# Focus when clicking
+~button1
+        bspc pointer --grab focus
+
+# Win + L = Lock
+super + l
+        bash ~/.scripts/lock
+
+# Expand tiled space
+super + alt + {Left,Down,Up,Right}
+        bspc node {@west -r -10,@south -r +10,@north -r -10,@east -r +10}
+
+# Contract tiled space
+super + alt + shift + {Left,Down,Up,Right}
+        bspc node {@east -r -10,@north -r +10,@south -r -10,@west -r +10}
+
+# Make split ratios equal
+super + w
+        bspc node @/ --equalize
+
+# Switch to desktop ^n controls
+super + 1
+        bspc desktop --focus ^1
+
+super + 2
+        bspc desktop --focus ^2
+
+super + 3
+        bspc desktop --focus ^3
+
+# Volume controls
+XF86AudioLowerVolume
+        bash ~/.scripts/volume_down
+
+XF86AudioRaiseVolume
+        bash ~/.scripts/volume_up
+
+XF86AudioMute
+        amixer set Master toggle
+
+# Brightness controls
+XF86MonBrightnessUp
+        xbacklight -inc 5
+
+XF86MonBrightnessDown
+        xbacklight -dec 5

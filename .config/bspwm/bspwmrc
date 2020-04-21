@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# Autostart applications
+sxhkd &
+feh --bg-fill /home/stefano/Pictures/wallpapers/red-and-black.jpg
+bash /home/stefano/.config/polybar/launch.sh
+compton &
+xrdb -merge ~/.config/.Xresources
+dunst &
+
+# Config
+bspc monitor -d 'I' 'II' 'III'
+
+bspc config border_width 5
+bspc config window_gap 15
+
+bspc config normal_border_color "#ff0033"
+bspc config active_border_color "#ff0033"
+bspc config focused_border_color "#ff0033"

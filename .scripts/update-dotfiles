@@ -1,20 +1,34 @@
 #!/bin/bash
 
-cp -r ~/.config/openbox ~/Documents/dotfiles/.config/
-cp -r ~/.config/polybar ~/Documents/dotfiles/.config/
-cp -r ~/.config/.Xresources ~/Documents/dotfiles/.config/.Xresources
-cp -r ~/.config/kitty ~/Documents/dotfiles/.config/
-cp -r ~/.config/compton.conf ~/Documents/dotfiles/.config/compton.conf
-cp -r ~/.config/dunst ~/Documents/dotfiles/.config
+dotpath="$HOME/Documents/dotfiles"
 
-cp -r ~/.config/i3/config ~/Documents/dotfiles/.config/i3/
+# Openbox files
+cp -rf ~/.config/openbox "$dotpath"/.config
 
-cp -r ~/.scripts ~/Documents/dotfiles/
-cp -r ~/.bash_aliases ~/Documents/dotfiles/.bash_aliases
-cp -r ~/.bashrc ~/Documents/dotfiles/.bashrc
-cp -r ~/.themes ~/Documents/dotfiles/
-cp -r ~/.fonts ~/Documents/dotfiles/
-cp -r ~/.sounds ~/Documents/dotfiles/
+# Polybar files
+cp -rf ~/.config/polybar "$dotpath"/.config
+
+# Kitty terminal files
+cp -rf ~/.config/kitty "$dotpath"/.config
+
+# BSPWM files
+cp -rf ~/.config/bspwm "$dotpath"/.config
+cp -rf ~/.config/sxhkd "$dotpath"/.config
+
+# Bash files
+cp -rf ~/.bash_aliases "$dotpath"/.bash_aliases
+cp -rf ~/.bashrc "$dotpath"/.bashrc
+
+# Extras: scripts, themes, fonts, sounds
+cp -rf ~/.scripts "$dotpath"
+cp -rf ~/.themes "$dotpath"
+cp -rf ~/.fonts "$dotpath"
+cp -rf ~/.sounds "$dotpath"
+
+# Miscellanous files
+cp -rf ~/.config/.Xresources "$dotpath"/.config/.Xresources
+cp -rf ~/.config/compton.conf "$dotpath"/.config/compton.conf
+cp -rf ~/.config/dunst "$dotpath"/.config
 
 cd ~/Documents/dotfiles
 git add .
