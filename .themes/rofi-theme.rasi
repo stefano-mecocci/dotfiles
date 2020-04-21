@@ -1,47 +1,33 @@
 * {
   black:      #000000;
   red:        #eb6e67;
-  green:      #95ee8f;
-  yellow:     #f8c456;
-  blue:       #6eaafb;
-  mangenta:   #d886f3;
-  cyan:       #6cdcf7;
-  emphasis:   #f21374;
-  text:       #dfdfdf;
+  emphasis:   #ee0022;
+  text:       #ededed;
   text-alt:   #b2b2b2;
   fg:         #abb2bf;
-  bg:         #202020;
+  bg:         #121212ff;
 
   spacing: 0;
   background-color: transparent;
 
-  font: "Roboto 14";
+  font: "Roboto 16";
   text-color: @text;
 }
 
 window {
   transparency: "real";
   fullscreen: true;
-  background-color: #202020ff;
+  background-color: #12121200;
 }
 
 mainbox {
   padding: 30% 30%;
+  background-color: @bg;
 }
 
 inputbar {
   margin: 0px 0px 20px 0px;
-  children: [prompt, textbox-prompt-colon, entry, case-indicator];
-}
-
-prompt {
-  text-color: @blue;
-}
-
-textbox-prompt-colon {
-  expand: false;
-  str: ":";
-  text-color: @text-alt;
+  children: [entry, case-indicator];
 }
 
 entry {
@@ -51,13 +37,13 @@ entry {
 listview {
   spacing: 5px;
   dynamic: true;
-  scrollbar: false;
+  scrollbar: true;
 }
 
 element {
-  padding: 5px;
+  padding: 10px;
   text-color: @text-alt;
-  highlight: bold #95ee8f; /* green */
+  highlight: bold #ffffff;
   border-radius: 3px;
 }
 
@@ -68,22 +54,4 @@ element selected {
 
 element urgent, element selected urgent {
   text-color: @red;
-}
-
-element active, element selected active {
-  text-color: @purple;
-}
-
-message {
-  padding: 5px;
-  border-radius: 3px;
-  background-color: @emphasis;
-  border: 1px;
-  border-color: @cyan;
-}
-
-button selected {
-  padding: 5px;
-  border-radius: 3px;
-  background-color: @emphasis;
 }

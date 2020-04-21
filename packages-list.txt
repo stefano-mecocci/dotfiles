@@ -3,7 +3,6 @@ codium
 compton
 evince
 feh
-eog
 kitty
 firmware-atheros
 git
@@ -39,3 +38,6 @@ scrot
 amixer
 i3lock
 zentile (from github)
+zathura
+bspwm (from github)
+sxhkd (from github)
