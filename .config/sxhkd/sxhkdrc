@@ -14,9 +14,9 @@ super + r
 super + Return
         kitty
 
-# Show Desktop
-super + d
-        boh
+# Night mode
+super + n
+        bash ~/.scripts/night
 
 # Go fullscreen
 super + f
@@ -100,3 +100,8 @@ XF86MonBrightnessUp
 
 XF86MonBrightnessDown
         xbacklight -dec 5
+
+# Copy screenshot to clipboard
+Print
+    sleep 0.2; \
+    bash ~/.scripts/copyscreenshot

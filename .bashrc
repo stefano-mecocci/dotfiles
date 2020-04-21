@@ -71,7 +71,5 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export EDITOR=nano
+export EDITOR=vim
 export XDG_CURRENT_DIR=/run/user/1000
-export GOPATH=$HOME/Documents/go
-export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
