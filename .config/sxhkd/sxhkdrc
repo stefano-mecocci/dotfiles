@@ -24,7 +24,7 @@ super + f
 
 # Open Chrome
 super + b
-        google-chrome
+        google-chrome-stable --enable-features=WebUIDarkMode --force-dark-mode
 
 # Close current window
 super + q

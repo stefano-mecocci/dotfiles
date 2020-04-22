@@ -18,3 +18,5 @@ alias py='python3'
 alias gs='git status'
 alias gsdot='cd ~/Documents/dotfiles && gs && cd -'
 alias trainingclock='tty-clock -c -D -s'
+
+alias jasmin='java -jar ~/Documents/jasmin.jar'
