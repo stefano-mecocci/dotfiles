@@ -1,5 +1,0 @@
-Roboto
-Roboto Mono
-Font Awesome Regular
-Font Awesome Solid
-Material Icons

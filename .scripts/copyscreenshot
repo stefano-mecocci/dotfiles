@@ -1,4 +1,0 @@
-#!/bin/bash
-
-scrot -s -e 'xclip -selection c -t image/png < $f'
-play $HOME/.sounds/camera-shutter.mp3
