@@ -1,0 +1,14 @@
+#!/bin/bash
+
+if [ $# -ne 1  ]
+then
+        exit
+fi
+
+if [ $1 = "t" ]
+then
+        bspc rule -a "*" state=tiled
+elif [ $1 = "f" ]
+then
+        bspc rule -a "*" state=floating
+fi

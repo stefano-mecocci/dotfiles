@@ -1,0 +1,16 @@
+#!/bin/bash
+
+if [ $1 -eq 0 ]
+then
+    mode="floating"
+else
+    mode="tiled"
+fi
+
+list=$(bspc query -N -n .window)
+
+for w in $list
+do
+    echo $w
+    bspc node $w -t $mode
+done
