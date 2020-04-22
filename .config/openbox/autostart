@@ -1,0 +1,5 @@
+feh --bg-fill /home/stefano/Pictures/wallpapers/red-and-black.jpg
+bash /home/stefano/.config/polybar/launch.sh
+compton &
+xrdb -merge ~/.config/.Xresources
+zentile &
