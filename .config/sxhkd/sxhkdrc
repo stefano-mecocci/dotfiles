@@ -34,21 +34,13 @@ super + q
 super + e
         rofi -no-lazy-grab -show drun -theme ~/.themes/rofi-theme.rasi
 
-# Make window floating
-super + a
-        bspc node --state floating
-
-# Make window tiled
-super + t
-        bspc node --state tiled
+# Make current window floating/tiled
+super + {a,t}
+        bspc node --state {floating,tiled}
 
 # Cycle through windows
 alt + {_,shift} + Tab
         bspc node --focus {prev,next}
-
-# Like Alt+Tab but for desktops
-super + {_,shift} + Tab
-        bspc desktop --focus {prev,next}.occupied
 
 # Focus/Swap window
 super + {_,shift + }{Left,Down,Up,Right}
@@ -60,7 +52,7 @@ super + {_,shift + }{Left,Down,Up,Right}
 
 # Win + L = Lock
 super + l
-        bash ~/.scripts/lock
+        i3lock -i ~/Pictures/wallpapers/frattale.png
 
 # Expand tiled space
 super + alt + {Left,Down,Up,Right}
@@ -75,33 +67,33 @@ super + w
         bspc node @/ --equalize
 
 # Switch to desktop ^n controls
-super + 1
-        bspc desktop --focus ^1
-
-super + 2
-        bspc desktop --focus ^2
-
-super + 3
-        bspc desktop --focus ^3
+super + {1-3}
+        bspc desktop --focus ^{1-3}
 
 # Volume controls
-XF86AudioLowerVolume
-        bash ~/.scripts/volume_down
-
-XF86AudioRaiseVolume
-        bash ~/.scripts/volume_up
+{XF86AudioLowerVolume, XF86AudioRaiseVolume}
+        bash ~/.scripts/volume {-, +}
 
 XF86AudioMute
         amixer set Master toggle
 
 # Brightness controls
-XF86MonBrightnessUp
-        xbacklight -inc 5
-
-XF86MonBrightnessDown
-        xbacklight -dec 5
+{XF86MonBrightnessDown, XF86MonBrightnessUp}
+        xbacklight {-dec,-inc} 5
 
 # Copy screenshot to clipboard
 Print
     sleep 0.2; \
     bash ~/.scripts/copyscreenshot
+
+# Send to desktop n
+super + shift + {1-3}
+        bspc node --to-desktop ^{1-3}
+
+# Floating mode
+ctrl + super + f
+        bash ~/.scripts/switch-mode 0
+
+# Tiled mode
+ctrl + super + t
+        bash ~/.scripts/switch-mode 1

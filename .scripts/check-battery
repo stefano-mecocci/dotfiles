@@ -5,7 +5,7 @@ export DISPLAY=:0
 battery=$(cat /sys/class/power_supply/BAT1/capacity)
 
 if [ $battery -lt 20 ]; then
-	/usr/bin/notify-send "Batteria scarica" "Sotto il 20%"
+	/usr/bin/notify-send "Sistema" "Batteria sotto il 20%"
         play $HOME/.sounds/battery_low.mp3
 fi
 

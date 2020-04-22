@@ -1,43 +1,42 @@
+amixer
 bash-completion
+# for rounded corners ;)
+bspwm (from github https://github.com/Javyre/bspwm)
+clang-format
 codium
 compton
-evince
 feh
-kitty
 firmware-atheros
-git
-polybar
-make
-clang-format
 gcc
+git
 google-chrome-stable
+i3lock
+kitty
+libnotify4
 libreoffice-calc
 libreoffice-writer
-vlc
+libsox-fmt-all
+make
 nautilus
+neofetch
 notify-osd
-libnotify4
-openbox
 openjdk-11-jdk
+polybar
 pulseaudio
 redshift
 rofi
+scrot
 simple-scan
 sox
-libsox-fmt-all
 suckless-tools
+sxhkd (from github https://github.com/baskerville/sxhkd)
 telegram-desktop
 tlp
 tlp-rdw
+tty-clock
+vlc
 wireless-tools
 wpasupplicant
 xinit
-neofetch
-tty-clock
-scrot
-amixer
-i3lock
-zentile (from github)
 zathura
-bspwm (from github)
-sxhkd (from github)
+zentile (from github https://github.com/blrsn/zentile)
