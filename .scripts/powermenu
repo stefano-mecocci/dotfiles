@@ -1,0 +1,25 @@
+#!/bin/bash
+
+shutdown=""
+reboot=""
+suspend=""
+logout=""
+
+options="$shutdown\n$reboot\n$suspend\n$logout"
+
+chosen=$(echo -e "$options" | rofi -theme ~/.themes/powermenu.rasi -p "x" -dmenu)
+
+case $chosen in
+    $shutdown)
+        systemctl poweroff
+        ;;
+    $reboot)
+        systemctl reboot
+        ;;
+    $suspend)
+        systemctl suspend
+        ;;
+    $logout)
+        bspc quit 1
+        ;;
+esac
