@@ -1,5 +1,6 @@
 #!/bin/bash
 
+echo
 echo "-------------------------------------"
 echo "Copying files to your home directory"
 echo "Choose what to copy with [y/n]"
@@ -96,3 +97,19 @@ read copy
 if [ $copy = "y" ];then
     cp -r .themes ~/
 fi
+
+echo -n ".config/.Xresources? "
+read copy
+
+if [ $copy = "y" ];then
+    cp .config/.Xresources ~/.config
+fi
+
+echo -n ".config/compton.conf? "
+read copy
+
+if [ $copy = "y" ];then
+    cp .config/compton.conf ~/.config
+fi
+
+echo

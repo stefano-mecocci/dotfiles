@@ -1,19 +1,19 @@
-# ~/.bashrc: eseguito da bash per non-login shells
+# ~/.bashrc: executed by bash for login-shells
 
-# se non è in esecuzione interattiva, non fare nulla
+# If not interactive do not do anything
 case $- in
     *i*) ;;
       *) return;;
 esac
 
-# non mettere linee duplicate nella cronologia
+# do not puth duplicate lines in history
 HISTCONTROL=ignoreboth
 shopt -s histappend
 HISTSIZE=1000
 HISTFILESIZE=2000
 shopt -s checkwinsize
 
-# fa funzionare il pattern "**"
+# make the pattern "**" works
 shopt -s globstar
 
 # set variable identifying the chroot you work in (used in the prompt below)
@@ -71,5 +71,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export EDITOR=vim
+# some useful env variables
+export EDITOR=nano
 export XDG_CURRENT_DIR=/run/user/1000
