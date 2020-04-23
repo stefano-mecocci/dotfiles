@@ -14,4 +14,4 @@ then
         amixer set Master 5%-
 fi
 
-play $HOME/.sounds/drip.ogg
+play $HOME/.sounds/drip.ogg &> /dev/null
