@@ -9,13 +9,11 @@
 
   spacing: 0;
   background-color: transparent;
-
   font: "Roboto 16";
   text-color: @text;
 }
 
 window {
-  transparency: "real";
   fullscreen: true;
   background-color: #12121200;
 }
@@ -37,21 +35,15 @@ entry {
 listview {
   spacing: 5px;
   dynamic: true;
-  scrollbar: true;
 }
 
 element {
   padding: 10px;
   text-color: @text-alt;
   highlight: bold #ffffff;
-  border-radius: 3px;
 }
 
 element selected {
   background-color: @emphasis;
   text-color: @text;
-}
-
-element urgent, element selected urgent {
-  text-color: @red;
 }
