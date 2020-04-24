@@ -11,12 +11,13 @@ chosen=$(echo -e "$options" | rofi -theme ~/.themes/powermenu.rasi -p "x" -dmenu
 
 case $chosen in
     $shutdown)
-        systemctl poweroff
+        bash ~/.scripts/poweroff-sure
         ;;
     $reboot)
-        systemctl reboot
+        bash ~/.scripts/reboot-sure
         ;;
     $suspend)
+        amixer set Master mute
         systemctl suspend
         ;;
     $logout)

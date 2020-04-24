@@ -1,0 +1,16 @@
+#!/bin/bash
+
+yes="Y"
+no="N"
+
+options="$yes\n$no"
+chosen=$(echo -e "$options" | rofi -theme ~/.themes/sure.rasi -dmenu)
+
+case $chosen in
+    $yes)
+        systemctl reboot
+        ;;
+    $no)
+        notify-send "Sistema" "Riavvio annullato"
+        ;;
+esac
