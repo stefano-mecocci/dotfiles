@@ -6,7 +6,6 @@ bspc monitor -d 1 2 3
 sxhkd &
 feh --bg-fill $HOME/Pictures/wallpapers/red-and-black.jpg
 bash $HOME/.scripts/launch.sh
-compton &
 xrdb -merge ~/.config/.Xresources
 dunst &
 bash $HOME/.scripts/check-updates

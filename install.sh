@@ -105,11 +105,11 @@ if [ $copy = "y" ];then
     cp .config/.Xresources ~/.config
 fi
 
-echo -n ".config/compton.conf? "
+echo -n ".config/picom.conf? "
 read copy
 
 if [ $copy = "y" ];then
-    cp .config/compton.conf ~/.config
+    cp .config/picom.conf ~/.config
 fi
 
 echo
