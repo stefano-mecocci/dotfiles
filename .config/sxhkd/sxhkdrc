@@ -1,0 +1,103 @@
+# Draw terminals!        
+super + z
+        bash ~/.scripts/kittydraw
+
+# Powermenu (shutdown, reboot, suspend, logout)
+super + p
+    bash ~/.scripts/powermenu
+
+# Reload configuration files
+super + r
+        pkill -USR1 -x sxhkd
+
+# Open terminal
+super + Return
+        kitty
+
+# Night mode
+super + n
+        bash ~/.scripts/night
+
+# Go fullscreen
+super + f
+        bspc node -t fullscreen
+
+# Open Chrome
+super + b
+        google-chrome-stable --enable-features=WebUIDarkMode --force-dark-mode
+
+# Close current window
+super + q
+        bspc node --close
+
+# Open application menu
+super + e
+        rofi -no-lazy-grab -show drun -theme ~/.themes/appmenu.rasi
+
+# Make current window floating/tiled
+super + {a,t}
+        bspc node --state {floating,tiled}
+
+# Cycle through windows
+alt + {_,shift} + Tab
+        bspc node --focus {prev,next}
+
+# Focus/Swap window
+super + {_,shift + }{Left,Down,Up,Right}
+        bspc node --{focus,swap} {west,south,north,east}
+
+# Focus when clicking
+~button1
+        bspc pointer --grab focus
+
+# Win + L = Lock
+super + l
+        bash ~/.scripts/lock
+
+# Expand tiled space
+super + alt + {Left,Down,Up,Right}
+        bspc node {@west -r -10,@south -r +10,@north -r -10,@east -r +10}
+
+# Contract tiled space
+super + alt + shift + {Left,Down,Up,Right}
+        bspc node {@east -r -10,@north -r +10,@south -r -10,@west -r +10}
+
+# Make split ratios equal
+super + w
+        bspc node @/ --equalize
+
+# Switch to desktop ^n controls
+super + {1-3}
+        bspc desktop --focus ^{1-3}
+
+# Volume controls
+{XF86AudioLowerVolume, XF86AudioRaiseVolume}
+        bash ~/.scripts/volume {-, +}
+
+XF86AudioMute
+        amixer set Master toggle
+
+# Toggle touchpad
+XF86TouchpadToggle
+        bash ~/.scripts/toggle-touchpad
+
+# Brightness controls
+{XF86MonBrightnessDown, XF86MonBrightnessUp}
+        xbacklight {-dec,-inc} 5
+
+# Copy screenshot to clipboard
+Print
+    sleep 0.2; \
+    bash ~/.scripts/copyscreenshot
+
+# Send to desktop n
+super + shift + {1-3}
+        bspc node --to-desktop ^{1-3}
+
+# Floating mode
+ctrl + super + f
+        bash ~/.scripts/switch-mode 0
+
+# Tiled mode
+ctrl + super + t
+        bash ~/.scripts/switch-mode 1
