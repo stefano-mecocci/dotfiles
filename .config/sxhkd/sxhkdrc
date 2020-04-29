@@ -77,8 +77,9 @@ super + {1-3}
 XF86AudioMute
         amixer set Master toggle
 
-# Toggle touchpad
+# Touchpad toggle
 XF86TouchpadToggle
+        sleep 0.2; \
         bash ~/.scripts/toggle-touchpad
 
 # Brightness controls

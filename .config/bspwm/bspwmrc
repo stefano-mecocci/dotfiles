@@ -9,7 +9,9 @@ bash $HOME/.scripts/launch.sh
 xrdb -merge ~/.config/.Xresources
 dunst &
 bash $HOME/.scripts/check-updates
+
 rm -f $HOME/*.png
+xinput set-prop 11 "libinput Tapping Enabled" 1
 
 # Config
 bspc config border_width 5
