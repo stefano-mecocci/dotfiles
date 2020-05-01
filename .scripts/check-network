@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 count=0
-disconnected=""
-wireless_connected=""
+disconnected="%{F#03fcfc}%{F-}"
+wireless_connected="%{F#03fcfc}%{F-}"
 ethernet_connected=""
 
 ID="$(ip link | awk '/state UP/ {print $2}')"

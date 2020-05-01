@@ -79,7 +79,6 @@ XF86AudioMute
 
 # Touchpad toggle
 XF86TouchpadToggle
-        sleep 0.2; \
         bash ~/.scripts/toggle-touchpad
 
 # Brightness controls
@@ -102,3 +101,10 @@ ctrl + super + f
 # Tiled mode
 ctrl + super + t
         bash ~/.scripts/switch-mode 1
+
+# Make window gap disappear
+ctrl + super + 0
+        bspc config window_gap 0
+
+ctrl + super + 1
+        bspc config window_gap 20

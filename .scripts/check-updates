@@ -1,8 +1,11 @@
-sleep 1
+#!/bin/bash
 
+sleep 1
 updates=$(echo "$(apt list --upgradable 2> /dev/null | wc -l)-1" | bc)
 
 if [ $updates -ne 0 ]; then
     notify-send "Sistema" "Ci sono $updates nuovi aggiornamenti" -t 10000
     play $HOME/.sounds/notify.mp3
+else
+    notify-send "Sistema" "Sistema aggiornato!"
 fi

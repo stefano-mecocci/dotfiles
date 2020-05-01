@@ -1,8 +1,7 @@
 * {
   black:      #000000;
-  red:        #eb6e67;
-  emphasis:   #ee0022;
-  text:       #ededed;
+  emphasis:   #03fcfc;
+  text:       #111111;
   text-alt:   #b2b2b2;
   fg:         #abb2bf;
   bg:         #121212ff;
@@ -40,7 +39,6 @@ listview {
 element {
   padding: 10px;
   text-color: @text-alt;
-  highlight: bold #ffffff;
 }
 
 element selected {

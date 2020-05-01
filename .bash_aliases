@@ -1,5 +1,5 @@
 alias ls='ls -1 --color=auto'
-alias ll='ls -l -h --color=auto'
+alias ll='ls -lh --color=auto'
 alias la='ls -1A --color=auto'
 alias rm='rm -i'
 
@@ -13,3 +13,4 @@ alias py='python3'
 alias gs='git status'
 alias trainingclock='tty-clock -c -D -s'
 alias jasmin='java -jar ~/Documents/jasmin.jar'
+alias neofetch="bash ~/.scripts/logo.sh"

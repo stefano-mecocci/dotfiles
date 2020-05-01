@@ -1,8 +1,8 @@
 /* Theme for the powermenu */
 
 * {
-  accent:           #ff0033;
-  background:       #eee;
+  accent:           #03fcfc;
+  background:       #222;
   background-light: #333333;
   foreground:       #111;
   on:               #44ad4d;
@@ -12,8 +12,7 @@
 * {
   /* General */
   text-font:                            "Roboto 12";
-  icon-font:                            "Font Awesome 32";
-  icon-font-small:                      "Font Awesome 24";
+  icon-font:                            "Font Awesome 34";
 
   option-6-listview-spacing:            10px;
 
@@ -28,7 +27,7 @@
 /* ########### */
 
 #window {
-  width: 33%;
+  width: 31%;
   height: 185px;
 }
 
@@ -47,7 +46,7 @@
   layout: horizontal;
 }
 #element {
-  padding: 40px;
+  padding: 50px;
   background-color: @background-light;
 }
 #element.selected {
