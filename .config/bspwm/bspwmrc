@@ -1,6 +1,6 @@
 #!/bin/bash
 
-bspc monitor -d 'I' 2 3
+bspc monitor -d I II III
 
 # Autostart applications
 sxhkd &
