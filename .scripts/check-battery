@@ -6,8 +6,8 @@ plugged=$(acpi -a | cut -d" " -f3 | cut -d- -f1)
 battery=$(cat /sys/class/power_supply/BAT1/capacity)
 
 if [ $battery -lt 22 -a $plugged = "off" ]; then
+    play $HOME/.sounds/battery_low.mp3 &
 	/usr/bin/notify-send "Sistema" "Batteria sotto il 22%"
-    play $HOME/.sounds/battery_low.mp3
 else
     exit
 fi

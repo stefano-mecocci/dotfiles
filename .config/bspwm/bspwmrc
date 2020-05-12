@@ -1,16 +1,18 @@
 #!/bin/bash
 
-bspc monitor -d I II III
+bspc monitor -d 1 2 3
 
 # Autostart applications
 sxhkd &
-feh --bg-fill $HOME/Pictures/wallpapers/abstract2.png
+xsetroot -cursor_name left_ptr
+feh --bg-fill $HOME/Pictures/wallpapers/abstract1.png
 bash $HOME/.scripts/start-polybar
 xrdb -merge ~/.config/.Xresources
 dunst &
 bash $HOME/.scripts/check-updates
 rm -f $HOME/*.png
 xinput set-prop 11 "libinput Tapping Enabled" 1
+compton &
 
 # Config
 bspc config border_width 0

@@ -1,3 +1,7 @@
+# Logout
+ctrl + super + x
+        bspc quit 1
+
 # Draw terminals!        
 super + z
         bash ~/.scripts/kittydraw

@@ -1,5 +1,5 @@
-xsetroot -cursor_name left_ptr
+#xsetroot -cursor_name left_ptr
 # exec openbox-session
 
 # Main WM
-exec bspwm
+exec gnome-session
