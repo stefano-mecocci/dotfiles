@@ -1,3 +1,0 @@
-#!/bin/bash
-
-i3lock -f -i $HOME/Pictures/wallpapers/abstract1.png && echo mem /sys/power/state

@@ -1,0 +1,9 @@
+Ubuntu 20.04
+
+tree
+i3
+feh
+redshift
+tlp
+polybar [from source]
+

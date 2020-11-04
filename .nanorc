@@ -1,0 +1,30 @@
+set morespace
+set nohelp
+set mouse
+
+## TeX
+include "/usr/share/nano/tex.nanorc"
+
+## spifftastic nano highlighting nano!!
+include "~/.nano/nanorc.nanorc"
+
+## Ruby
+include "~/.nano/ruby.nanorc"
+
+## C/C++
+include "~/.nano/c.nanorc"
+
+## Python
+include "~/.nano/python.nanorc"
+
+## CSS
+include "~/.nano/css.nanorc"
+
+## HTML
+include "~/.nano/html.nanorc"
+
+## Markdown
+include "~/.nano/markdown.nanorc"
+
+## Haskell
+include "~/.nano/haskell.nanorc"
