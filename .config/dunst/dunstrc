@@ -1,0 +1,120 @@
+[global]
+    # font family and size
+    font = Monospace 11
+
+    # allow markup
+    allow_markup = yes
+
+    # The format of the message. Possible variables are:
+    #   %a  appname
+    #   %s  summary
+    #   %b  body
+    #   %i  iconname (including its path)
+    #   %I  iconname (without its path)
+    #   %p  progress value if set ([  0%] to [100%]) or nothing
+    format = "<b>%s</b>\n%b"
+
+    # Sort messages by urgency
+    sort = yes
+
+    # Show how many messages are currently hidden
+    indicate_hidden = yes
+
+    # alignment of message text: "left", "center" or "right"
+    alignment = left
+
+    show_age_threshold = -1
+
+    # split notifications into multiple lines if they don't fit into geometry
+    word_wrap = yes
+
+    # ignore newlines '\n' in notifications
+    ignore_newline = no
+
+    # the geometry of the window
+    # geometry [{width}]x{height}][+/-{x}+/-{y}]
+    geometry = "400x5+760+20"
+
+    # The transparency of the window. range: [0; 100]
+    # This option require compositing (es. compton)
+    transparency = 0
+
+    # Don't remove messages, if no mouse or keyboard input) for longer than idle_threshold seconds.
+    idle_threshold = 120
+
+    # Which monitor should the notifications be displayed on.
+    monitor = 0
+
+    follow = keyboard
+
+    # should a notification popped up from history be sticky or
+    # timeout as if it would normally do.
+    sticky_history = yes
+
+    # The height of a single line. If the height is smaller than the font height,
+    # it will get raised to the font height.
+    # This adds empty space above and under the text.
+    line_height = 2
+
+    # Draw a line of 'separatpr_height' pixel height between two notifications.
+    # Set to 0 to disable
+    separator_height = 3
+
+    # padding between text and separator
+    padding = 12
+
+    # horizontal padding
+    horizontal_padding = 18
+
+    # Define a color for the separator.
+    # possible values are:
+    #  * auto: dunst tries to find a color fitting to the background
+    #  * foreground: use the same color as the foreground
+    #  * frame: use the same color as the frame.
+    #  * anything else will be interpreted as a X color
+    separator_color = "#af2ad4"
+
+    # print a notification on startup
+    # This is mainly for error detection, since dbus (re-)starts dunst
+    # automatically after a crash.
+    startup_notification = false
+
+    # dmenu path
+    dmenu = /usr/bin/dmenu -p dunst:
+
+    # browser for opening urls in context menu
+    browser = /opt/google/chrome/chrome
+
+[frame]
+    width = 3
+    color = "#af2ad4"
+
+[shortcuts]
+    # available modifiers are 'ctrl', 'mod1' (the alt-key), 'mod2', 'mod3'
+    # and 'mod4' (windows-key)
+    # xev might be helpful to find names for keys
+
+    # close notification
+    close = mod4+m
+
+    # close all notifications
+    close_all = mod4+shift+m
+
+    # redisplay last message(s)
+    history = mod4+n
+
+    # context menu
+    context = mod4+shift+i
+
+[urgency_low]
+    background = "#333333"
+    foreground = "#dddddd"
+
+[urgency_normal]
+    background = "#333333"
+    foreground = "#dddddd"
+
+[urgency_critical]
+    background = "#bf0404"
+    foreground = "#dddddd"
+    frame_color = "#bf0404"
