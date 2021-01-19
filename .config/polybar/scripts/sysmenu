@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Custom Rofi Script
+
 BORDER="#1F1F1F"
 SEPARATOR="#1F1F1F"
 FOREGROUND="#A9ABB0"
@@ -49,11 +51,19 @@ MENU="$(rofi -no-lazy-grab -sep "|" -dmenu -i -p 'System ' \
 -color-normal "$BACKGROUND_ALT,$FOREGROUND,$BACKGROUND_ALT,$HIGHLIGHT_BACKGROUND,$HIGHLIGHT_FOREGROUND" \
 -color-active "$BACKGROUND,$MAGENTA,$BACKGROUND_ALT,$HIGHLIGHT_BACKGROUND,$HIGHLIGHT_FOREGROUND" \
 -color-urgent "$BACKGROUND,$YELLOW,$BACKGROUND_ALT,$HIGHLIGHT_BACKGROUND,$HIGHLIGHT_FOREGROUND" \
-<<< "LOCK|LOGOUT|Reboot|Shutdown")"
-
+<<< "Lock|Logout|Reboot|Shutdown")"
 case "$MENU" in
   *Lock) i3lock -f -i $HOME/Immagini/Sfondi/dragone\ viola.png && echo mem /sys/power/state ;;
   *Logout) i3-nagbar -t warning -m 'Vuoi uscire?' -B 'Si' 'i3-msg exit';;
   *Reboot) systemctl reboot ;;
   *Shutdown) systemctl -i poweroff
 esac
+
+# More Options
+# -fullscreen \
+
+# Theming help
+# color window = background, border, separator
+# color normal = background, foreground, background-alt, highlight-background, highlight-foreground
+# color active = background, foreground, background-alt, highlight-background, highlight-foreground
+# color urgent = background, foreground, background-alt, highlight-background, highlight-foreground

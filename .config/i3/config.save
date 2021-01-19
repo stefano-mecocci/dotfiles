@@ -1,0 +1,115 @@
+# i3 config file (v4)
+
+set $mod Mod4
+floating_modifier $mod
+
+font pango:monospace 12
+font pango:Fira Code 12
+
+# STARTUP PROGRAMS
+exec xrdb ~/.Xresources
+exec ~/.config/polybar/launch.sh
+exec --no-startup-id feh --bg-scale /home/stefano/Immagini/Sfondi/mountain.jpg
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+exec --no-startup-id nm-applet
+
+## KEYBINDINGS
+
+# volume control
+set $refresh_i3status killall -SIGUSR1 i3status
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+
+# brightness control
+bindsym XF86MonBrightnessUp exec --no-startup-id sudo brightnessctl set 5+
+bindsym XF86MonBrightnessDown exec --no-startup-id sudo brightnessctl set 5-
+
+# kill window, open gnome-terminal, open dmenu
+bindsym $mod+Shift+q kill
+bindsym $mod+Return exec gnome-terminal
+bindsym $mod+d exec dmenu_run
+
+# Experimental
+bindsym $mod+p exec þ~/.scripts/powermenu.sh
+
+# change focus
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# move focused window
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# split in horizontal, vertical orientation
+bindsym $mod+h split h
+bindsym $mod+v split v
+
+# enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen toggle
+
+# change container layout
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+# floating toggle
+bindsym $mod+Shift+space floating toggle
+
+# change focus between tiling / floating windows
+bindsym $mod+space focus mode_toggle
+
+# switch workspace
+bindsym $mod+Tab workspace back_and_forth
+
+# Define names for default workspaces
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+
+# switch to workspace
+bindsym $mod+1 workspace number $ws1
+bindsym $mod+2 workspace number $ws2
+bindsym $mod+3 workspace number $ws3
+bindsym $mod+4 workspace number $ws4
+bindsym $mod+5 workspace number $ws5
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace number $ws1
+bindsym $mod+Shift+2 move container to workspace number $ws2
+bindsym $mod+Shift+3 move container to workspace number $ws3
+bindsym $mod+Shift+4 move container to workspace number $ws4
+bindsym $mod+Shift+5 move container to workspace number $ws5
+
+# reload config, restart i3
+bindsym $mod+Shift+c reload
+bindsym $mod+Shift+r restart
+
+# logout
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Vuoi veramente uscire da i3?' -B 'Si' 'i3-msg exit'"
+
+## CUSTOMIZATIONS
+
+title_align center
+default_border none
+hide_edge_borders none
+focus_follows_mouse no
+
+mode "resize" {
+        bindsym Left resize shrink width 10 px or 10 ppt
+        bindsym Down resize grow height 10 px or 10 ppt
+        bindsym Up resize shrink height 10 px or 10 ppt
+        bindsym Right resize grow width 10 px or 10 ppt
+
+        bindsym Escape mode "default"
+}
+
+bindsym $mod+r mode "resize"
+

@@ -1,0 +1,28 @@
+#!/bin/bash
+
+# File bash essenziali
+cp ~/.bashrc ~/progetti/dotfiles
+cp ~/.bash_aliases ~/progetti/dotfiles
+
+# Risorse X
+cp ~/.Xresources ~/progetti/dotfiles
+
+# Emacs
+cp ~/.emacs ~/progetti/dotfiles
+cp -r ~/.emacs.d ~/progetti/dotfiles
+
+# Git configuration
+cp -r ~/.gitconfig ~/progetti/dotfiles
+
+# Script vari
+cp -r ~/.scripts ~/progetti/dotfiles
+
+# Nano
+cp ~/.nanorc ~/progetti/dotfiles 
+
+# .config
+
+mkdir -p ~/progetti/dotfiles/.config
+cp -r ~/.config/i3 ~/progetti/dotfiles/.config/
+cp -r ~/.config/polybar ~/progetti/dotfiles/.config/
+cp -r ~/.config/rofi ~/progetti/dotfiles/.config/ 

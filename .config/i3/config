@@ -13,6 +13,8 @@ exec --no-startup-id feh --bg-scale /home/stefano/Immagini/Sfondi/mountain.jpg
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
 
+for_window [title="Not"] floating enable
+
 ## KEYBINDINGS
 
 # volume control
@@ -22,10 +24,17 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
+# brightness control
+bindsym XF86MonBrightnessUp exec --no-startup-id sudo brightnessctl set 5+
+bindsym XF86MonBrightnessDown exec --no-startup-id sudo brightnessctl set 5-
+
 # kill window, open gnome-terminal, open dmenu
 bindsym $mod+Shift+q kill
 bindsym $mod+Return exec gnome-terminal
 bindsym $mod+d exec dmenu_run
+
+# Experimental
+bindsym $mod+p exec --no-startup-id ~/.scripts/powermenu &> ~/a.txt
 
 # change focus
 bindsym $mod+Left focus left
@@ -56,6 +65,9 @@ bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
+
+# switch workspace
+bindsym $mod+Tab workspace back_and_forth
 
 # Define names for default workspaces
 set $ws1 "1"

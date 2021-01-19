@@ -1,15 +1,13 @@
 set morespace
 set nohelp
 set mouse
+set tabsize 4
 
 ## TeX
 include "/usr/share/nano/tex.nanorc"
 
-## spifftastic nano highlighting nano!!
+## Nano config
 include "~/.nano/nanorc.nanorc"
-
-## Ruby
-include "~/.nano/ruby.nanorc"
 
 ## C/C++
 include "~/.nano/c.nanorc"
