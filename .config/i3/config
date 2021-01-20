@@ -13,12 +13,10 @@ font pango:Fira Code 12
 # STARTUP PROGRAMS
 exec xrdb ~/.Xresources
 exec ~/.config/polybar/launch.sh
-exec --no-startup-id feh --bg-scale /home/stefano/immagini/sfondi/mountain.jpg
+exec --no-startup-id feh --bg-scale /home/stefano/immagini/sfondi/skeleton.jpg
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
 exec compton
-
-for_window [title="Not"] floating enable
 
 ## KEYBINDINGS
 
@@ -26,8 +24,9 @@ for_window [title="Not"] floating enable
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id ~/.scripts/volume + && $refresh_i3
 bindsym XF86AudioLowerVolume exec --no-startup-id ~/.scripts/volume - && $refresh_i3status
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
-bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+# da controllare
+#bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+#bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
 # brightness control
 bindsym XF86MonBrightnessUp exec --no-startup-id sudo brightnessctl set 5+
@@ -36,10 +35,11 @@ bindsym XF86MonBrightnessDown exec --no-startup-id sudo brightnessctl set 5-
 # kill window, open terminal, open dmenu
 bindsym $mod+Shift+q kill
 bindsym $mod+Return exec alacritty
-bindsym $mod+d exec dmenu_run
+bindsym $mod+d exec dmenu_run -p "Run:"
 
-# Experimental
+# screenshot
 bindsym $mod+p exec --no-startup-id flameshot gui
+bindsym $mod+a exec --no-startup-id ~/.config/polybar/scripts/menu_full
 
 # change focus
 bindsym $mod+Left focus left
@@ -115,7 +115,7 @@ mode "resize" {
         bindsym Up resize shrink height 10 px or 10 ppt
         bindsym Right resize grow width 10 px or 10 ppt
 
-        bindsym Escape mode "default"
+        bindsym $mod+r mode "default"
 }
 
 bindsym $mod+r mode "resize"

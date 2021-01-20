@@ -2,11 +2,40 @@
 
 bg = #2b2b2b
 fg = #DDDDDD
-red = #ff0000
+
+red = #e53935
+pink = #d81b60
 purple = #af2ad4
+deep-purple = #5e35b1
+indigo = #3949ab
+blue = #1e88e5
+light-blue = #039be5
+cyan = #00acc1
+teal = #00897b
+green = #43a047
+light-green = #7cb342
+lime = #c0ca33
+yellow = #fdd835
+amber = #ffb300
+orange = #fb8c00
+deep-orange = #f4511e
+brown = #6d4c41
+grey = #757575
+blue-gray = #546e7a
+
 acolor = #FFFFFF
 curgent = #EF5350
 coccupied = #42A5F5
+
+shade1 = #BF360C
+shade2 = #D84315
+shade3 = #E64A19
+shade4 = #F4511E
+shade5 = #FF5722
+shade6 = #FF7043
+shade7 = #FF8A65
+shade8 = #FFAB91
+txt = #2C2C2C
 
 [bar/main]
 width = 100%
@@ -14,6 +43,8 @@ height = 30
 
 offset-x = 0
 offset-y = 0
+;override-redirect = true
+;wm-restack = i3
 
 bottom = false
 fixed-center = true
@@ -36,6 +67,42 @@ modules-left = backlight volume
 modules-center = date
 modules-right = redshift network battery powermenu
 
+[module/workspaces]
+type = internal/xworkspaces
+enable-click = true
+enable-scroll = true
+format-padding = 1 
+
+format = <label-state>
+label-active = 
+label-occupied = 
+label-urgent = 
+label-empty = 
+
+label-empty-padding = 1
+label-active-padding = 1
+label-urgent-padding = 1
+label-occupied-padding = 1
+
+label-empty-foreground = ${color.fg}
+label-active-foreground = ${color.acolor}
+label-urgent-foreground = ${color.curgent}
+label-occupied-foreground = ${color.coccupied}
+
+[module/google]
+type = custom/text
+content = 
+content-padding = 2
+content-foreground = ${color.fg}
+click-left = google-chrome &
+
+[module/vscode]
+type = custom/text
+content = ﬏
+content-padding = 2
+content-foreground = ${color.fg}
+click-left = code &
+
 [module/battery]
 type = internal/battery
 full-at = 99
@@ -43,10 +110,10 @@ time-format = %H:%M
 battery = BAT1
 adapter = AC
 format-charging = <animation-charging> <label-charging>
-format-charging-padding = 1
+format-charging-padding = 2
 label-charging = %percentage%%
-format-discharging = " <ramp-capacity> <label-discharging> "
-format-discharging-padding = 1
+format-discharging = <ramp-capacity> <label-discharging>
+format-discharging-padding = 2
 label-discharging = %percentage%%
 format-full = <label-full>
 
@@ -80,10 +147,10 @@ animation-charging-framerate = 750
 [module/volume]
 type = internal/pulseaudio
 format-volume = <ramp-volume> <label-volume>
-format-volume-padding = 0
+format-volume-padding = 2
 label-volume = %percentage%%
 label-muted = "婢"
-label-muted-padding = 0
+label-muted-padding = 2
 
 ramp-volume-0 = 奄
 ramp-volume-1 = 奄
@@ -96,16 +163,17 @@ ramp-volume-6 = 墳
 [module/network]
 type = custom/script
 exec = ~/.config/polybar/scripts/check-network
-format-padding = 1
+format-padding = 2
+click-left = networkmanager_dmenu &
 tail = true
 
 [module/date]
 type = internal/date
 interval = 30
 label =  %time%
-time =  %H:%M
+label-padding = 2
+time =  %H:%M
 time-alt =  %d-%m-%Y
-#  = clock icon
 
 [module/powermenu]
 type = custom/text
@@ -114,13 +182,15 @@ content-padding = 2
 content-background = ${color.purple}
 content-foreground = ${color.fg}
 click-left = ~/.config/polybar/scripts/sysmenu
+click-right = ~/.config/polybar/scripts/sysmenu
 
 [module/redshift]
 type = custom/text
-content = " "
-content-padding = 0
+content = 
+content-padding = 2
 content-foreground = ${color.fg}
 click-left = ~/.scripts/night
+
 
 [module/backlight]
 type = internal/backlight
@@ -128,4 +198,4 @@ card = amdgpu_bl0
 
 format = <label>
 label =  %percentage%%
-label-padding = 2
+label-padding = 3

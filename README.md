@@ -14,6 +14,7 @@ Ubuntu 20.04
 - rofi
 - neofetch [apt]
 - flameshot [apt]
+- sxhkd [from https://github.com/baskerville/sxhkd.git]
 
 ## Fonts
 - Fira Code
