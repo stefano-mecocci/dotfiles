@@ -4,8 +4,6 @@ volume=$(bash ~/.scripts/get-volume.sh)
 
 if [[ $1 == "+" ]]; then
   amixer -c 1 set Master 5+
-  notify-send -t 1500 "Volume aumentato" "$volume"
 elif [[ $1 == "-" ]]; then
   amixer -c 1 set Master 5-
-  notify-send -t 1500 "Volume diminuito" "$volume"
 fi

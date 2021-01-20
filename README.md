@@ -6,7 +6,7 @@ Ubuntu 20.04
 
 ## Packages, apps and other
 - tree [apt]
-- i3 [apt]
+- i3-gaps-rounded [from https://gist.github.com/chewwt/cbdb71b92b9a45e3ac9314e64c58cbf4]
 - feh [apt]
 - redshift [apt]
 - tlp [apt]

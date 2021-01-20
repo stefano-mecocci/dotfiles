@@ -1,5 +1,9 @@
 # i3 config file (v4)
 
+# Gaps settings
+gaps inner 10
+smart_gaps on
+
 set $mod Mod4
 floating_modifier $mod
 

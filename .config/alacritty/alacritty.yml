@@ -3,7 +3,6 @@ window:
     columns: 76
     lines: 23
 
-  # space around the window
   padding:
     x: 20
     y: 20
@@ -21,8 +20,7 @@ font:
     family: "Fira Code"
     style: Medium
 
-  # Point size of the font
-  size: 13.0
+  size: 12.0
 
 bell:
   duration: 0
@@ -30,11 +28,11 @@ bell:
 background_opacity: 1.0
 
 key_bindings:
-  - { key: V, mods: Command, action: Paste }
-  - { key: C, mods: Command, action: Copy }
-  - { key: Plus, mods: Command, action: IncreaseFontSize }
+  - { key: V,     mods: Command, action: Paste            }
+  - { key: C,     mods: Command, action: Copy             }
+  - { key: Plus,  mods: Command, action: IncreaseFontSize }
   - { key: Minus, mods: Command, action: DecreaseFontSize }
-  - { key: F10, action: ResetFontSize }
+  - { key: F10,                  action: ResetFontSize    }
 
 mouse:
   hide_when_typing: true
@@ -43,6 +41,8 @@ mouse_bindings:
   - { mouse: Middle, action: PasteSelection }
 
 live_config_reload: true
+
+# Theme
 colors:
   # Default colors
   primary:
