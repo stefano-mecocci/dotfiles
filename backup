@@ -12,7 +12,7 @@ cp ~/.emacs ~/progetti/dotfiles
 cp -r ~/.emacs.d ~/progetti/dotfiles
 
 # Git configuration
-cp -r ~/.gitconfig ~/progetti/dotfiles
+cp ~/.gitconfig ~/progetti/dotfiles
 
 # Script vari
 cp -r ~/.scripts ~/progetti/dotfiles
@@ -20,7 +20,7 @@ cp -r ~/.scripts ~/progetti/dotfiles
 # Nano
 cp ~/.nanorc ~/progetti/dotfiles 
 
-# .config
+# .config/
 mkdir -p ~/progetti/dotfiles/.config
 
 # i3wm
@@ -28,9 +28,6 @@ cp -r ~/.config/i3 ~/progetti/dotfiles/.config/
 
 # Polybar
 cp -r ~/.config/polybar ~/progetti/dotfiles/.config/
-
-# Rofi
-cp -r ~/.config/rofi ~/progetti/dotfiles/.config/
 
 # Dunst
 cp -r ~/.config/dunst ~/progetti/dotfiles/.config/
