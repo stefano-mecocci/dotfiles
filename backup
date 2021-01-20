@@ -30,10 +30,13 @@ cp -r ~/.config/i3 ~/progetti/dotfiles/.config/
 cp -r ~/.config/polybar ~/progetti/dotfiles/.config/
 
 # Rofi
-cp -r ~/.config/rofi ~/progetti/dotfiles/.config/ 
+cp -r ~/.config/rofi ~/progetti/dotfiles/.config/
 
 # Dunst
 cp -r ~/.config/dunst ~/progetti/dotfiles/.config/
 
 # Compton
 cp ~/.config/compton.conf ~/progetti/dotfiles/.config/
+
+# Alacritty
+cp -r ~/.config/alacritty ~/progetti/dotfiles/.config/

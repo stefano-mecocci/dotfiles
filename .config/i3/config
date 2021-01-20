@@ -9,7 +9,7 @@ font pango:Fira Code 12
 # STARTUP PROGRAMS
 exec xrdb ~/.Xresources
 exec ~/.config/polybar/launch.sh
-exec --no-startup-id feh --bg-scale /home/stefano/immagini/Sfondi/mountain.jpg
+exec --no-startup-id feh --bg-scale /home/stefano/immagini/sfondi/mountain.jpg
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
 exec compton
@@ -29,13 +29,13 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 bindsym XF86MonBrightnessUp exec --no-startup-id sudo brightnessctl set 5+
 bindsym XF86MonBrightnessDown exec --no-startup-id sudo brightnessctl set 5-
 
-# kill window, open gnome-terminal, open dmenu
+# kill window, open terminal, open dmenu
 bindsym $mod+Shift+q kill
-bindsym $mod+Return exec gnome-terminal
+bindsym $mod+Return exec alacritty
 bindsym $mod+d exec dmenu_run
 
 # Experimental
-bindsym $mod+p exec --no-startup-id ~/.scripts/powermenu &> ~/a.txt
+bindsym $mod+p exec --no-startup-id flameshot gui
 
 # change focus
 bindsym $mod+Left focus left
