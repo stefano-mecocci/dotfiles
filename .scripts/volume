@@ -1,6 +1,6 @@
 #!/bin/bash
 
-volume=$(bash ~/.scripts/get-volume.sh)
+volume=$(amixer -c 1 | head -5 | tail -1 | cut -d" " -f6 | tr -d "[%]")
 
 if [[ $1 == "+" ]]; then
   amixer -c 1 set Master 5+

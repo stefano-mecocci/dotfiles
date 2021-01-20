@@ -1,0 +1,34 @@
+#!/bin/bash
+
+border="#1F1F1F"
+separator="#1F1F1F"
+foreground="#A9ABB0"
+background="#1F1F1F"
+background_alt="#252525"
+highlight_background="#af2ad4"
+highlight_foreground="#FFFFFF"
+
+# Launch Rofi
+menu="$(rofi -no-lazy-grab -sep "|" -dmenu -i -p 'Sistema ' \
+-hide-scrollbar true \
+-bw 0 \
+-lines 4 \
+-line-padding 14 \
+-padding 20 \
+-width 15 \
+-xoffset -27 -yoffset 60 \
+-location 3 \
+-columns 1 \
+-show-icons -icon-theme "Papirus" \
+-font "Fantasque Sans Mono 14" \
+-color-enabled true \
+-color-window "$background,$border,$separator" \
+-color-normal "$background_alt,$foreground,$background_alt,$highlight_background,$highlight_foreground" \
+<<< "Blocca|Esci|Riavvia|Arresta")"
+
+case "$menu" in
+  *Blocca) i3lock -f -i $HOME/immagini/sfondi/dragone\ viola.png && echo mem /sys/power/state ;;
+  *Esci) i3-nagbar -t warning -m 'Vuoi uscire?' -B 'Si' 'i3-msg exit';;
+  *Riavvia) systemctl reboot ;;
+  *Arresta) systemctl -i poweroff
+esac

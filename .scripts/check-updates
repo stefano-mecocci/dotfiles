@@ -1,0 +1,13 @@
+#!/bin/bash
+
+sleep 1
+#updates=$(echo "$(apt list --upgradable 2> /dev/null | wc -l)-1" | bc)
+updates=$1
+
+if [ $updates -eq 0 ]; then
+    notify-send "Sistema" "Il sistema è aggiornato"
+elif [ $updates -eq 1 ]; then
+    notify-send "Sistema" "C'è un aggiornamento disponibile" -t 5000
+else
+    notify-send "Sistema" "Ci sono $updates aggiornamenti disponibili" -t 5000
+fi
