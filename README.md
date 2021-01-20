@@ -10,8 +10,8 @@ Ubuntu 20.04
 - feh [apt]
 - redshift [apt]
 - tlp [apt]
-- polybar [from source]
-- rofi
+- polybar [from https://polybar.github.io/]
+- rofi [from https://github.com/davatorium/rofi]
 - neofetch [apt]
 - flameshot [apt]
 - sxhkd [from https://github.com/baskerville/sxhkd.git]
