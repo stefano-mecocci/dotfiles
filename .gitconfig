@@ -1,3 +1,5 @@
 [user]
 	name = Stefano
 	email = mecocci15@gmail.com
+[core]
+	editor = nano

@@ -10,6 +10,10 @@ alias rm='rm -i'
 alias mkdir='mkdir -p'
 alias df='df -h'
 
+alias gs='git status'
+
 alias battery="cat /sys/class/power_supply/BAT1/capacity"
 alias nano='nano -l -E'
 alias monitor="xrandr -q | grep ' connected' | head -n 1 | cut -d ' ' -f1"
+
+alias wifi-show='nmcli connection show'
